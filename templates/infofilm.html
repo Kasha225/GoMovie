@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="/static/infostyle.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="navbar">
+          <a href="/">ФИЛЬМЫ</a>
+          {{if .IsAuth}}
+          <a href="/liked">ИЗБРАННОЕ</a>
+          <a href="/watched">ПРОСМОТРЕННЫЕ</a>
+
+          {{end}}
+        </nav>
+        {{if .IsAuth}}
+        <div class="logout">
+          <p></p>
+          <a href="/logout">Log out</a>
+        </div>
+        {{else}}
+        <div class="logout">
+          <a href="/login">Login</a>
+        </div>
+        {{end}}
+      </header>
+      <div class="line"></div>
+      <main>
+        <div class="header_info_container">
+          <div class="left_info">
+            <h1>{{.Movie.Title}}</h1>
+            <ul>
+              <li>{{.Movie.Year}}</li>
+              <li>{{.Movie.Rated}}</li>
+              <li>{{.Movie.Runtime}}</li>
+            </ul>
+          </div>
+          <div class="right_info">
+            <p>IMDb RATING</p>
+            <p class="rate">{{.Movie.ImdbRating}}</p>
+          </div>
+        </div>
+        <div class="main_info">
+          <div class="main_container">
+            <div class="poster">
+              <img class="poster_img" src="{{.Movie.Poster}}" alt="Poster" />
+            </div>
+            <div class="movie_info">
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>Plot</p>
+                </div>
+                <div>
+                  <p>{{.Movie.Plot}}</p>
+                </div>
+              </div>
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>Country</p>
+                </div>
+                <div>
+                  <p>{{.Movie.Country}}</p>
+                </div>
+              </div>
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>Genre</p>
+                </div>
+                <div>
+                  <p>{{.Movie.Genre}}</p>
+                </div>
+              </div>
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>Production</p>
+                </div>
+                <div>
+                  <p>{{.Movie.Production}}</p>
+                </div>
+              </div>
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>Director</p>
+                </div>
+                <div>
+                  <p>{{.Movie.Director}}</p>
+                </div>
+              </div>
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>Writers</p>
+                </div>
+                <div>
+                  <p>{{.Movie.Writer}}</p>
+                </div>
+              </div>
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>Actors</p>
+                </div>
+                <div>
+                  <p>{{.Movie.Actors}}</p>
+                </div>
+              </div>
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>Language</p>
+                </div>
+                <div>
+                  <p>{{.Movie.Language}}</p>
+                </div>
+              </div>
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>Released</p>
+                </div>
+                <div>
+                  <p>{{.Movie.Released}}</p>
+                </div>
+              </div>
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>BoxOffice</p>
+                </div>
+                <div>
+                  <p>{{.Movie.BoxOffice}}</p>
+                </div>
+              </div>
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>DVD</p>
+                </div>
+                <div>
+                  <p>{{.Movie.DVD}}</p>
+                </div>
+              </div>
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>Awards</p>
+                </div>
+                <div>
+                  <p>{{.Movie.Awards}}</p>
+                </div>
+              </div>
+              <div class="movie_info_inside">
+                <div class="inside_info">
+                  <p>Website</p>
+                </div>
+                <div>
+                  <p>{{.Movie.Website}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

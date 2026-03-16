@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/loginstyles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Itim&family=Kelly+Slab&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="login_form">
+        <div class="container">
+          <h1>Login</h1>
+          <form action="/login" method="POST">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Login"
+              required
+            />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <a href="/register">Need to create an account?</a>
+            <button type="submit">Sign in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

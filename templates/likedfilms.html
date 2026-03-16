@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="navbar">
+          <a href="/">ФИЛЬМЫ</a>
+          <a href="/liked">ИЗБРАННОЕ</a>
+          <a href="/watched">ПРОСМОТРЕННЫЕ</a>
+        </nav>
+        <div class="logout">
+          <p></p>
+          <a href="/logout">Log out</a>
+        </div>
+      </header>
+      <div class="line"></div>
+      <main>
+        <div class="search_box">
+          <form action="/search" method="POST">
+            <input
+              type="text"
+              name="title_movie"
+              placeholder="Введите название..."
+              required
+            />
+            <button class="submit_btn" type="submit">Найти</button>
+          </form>
+        </div>
+        <div class="cards_container">
+          {{range .}}
+          <div class="card">
+            <a href="/movie/{{.ID}}">
+              <img class="card_img" src="{{.PosterURL}}" alt="Poster" />
+            </a>
+            <div class="card_text_container">
+              <div class="card_text_left">
+                <a href="/movie/{{.ID}}">
+                  <h3 class="card_text">{{.Title}}</h3>
+                  <h4>{{.Year}}</h4>
+                </a>
+              </div>
+
+              <div class="button_container">
+                <div class="card_right">
+                  <button class="btn_like" data-item-id="{{.ID}}">
+                    <img src="/static/like.png" />
+                  </button>
+                </div>
+                <div class="card_right">
+                  <button class="btn_watched" data-item-id="{{.ID}}">
+                    <img src="/static/eye.png" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{end}}
+        </div>
+      </main>
+    </div>
+    <script src="/static/states.js"></script>
+  </body>
+</html>

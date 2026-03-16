@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f141a;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_form {
+  width: 490px;
+  height: 610px;
+  left: 715px;
+  top: 273px;
+  background: #fbfcfc;
+  border-radius: 20px;
+  margin-top: 225px;
+}
+
+.container {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.container h1 {
+  font-family: "Kelly Slab";
+  font-size: 50px;
+}
+
+.container input {
+  width: 414px;
+  height: 52px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.container a {
+  color: #18c4f9;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: "Kelly Slab";
+}
+.container p {
+  font-size: 25px;
+  font-family: "Kelly Slab";
+  align-self: flex-start;
+  margin-left: 38px;
+  margin-top: 75px;
+}
+
+.container button {
+  width: 414px;
+  height: 71px;
+  background: #3fe637;
+  border-radius: 40px;
+  font-family: "Kelly Slab";
+  font-size: 40px;
+  text-align: center;
+  border: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}

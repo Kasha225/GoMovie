@@ -1,0 +1,49 @@
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/registerstyles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Itim&family=Kelly+Slab&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="login_form">
+        <div class="container">
+          <h1>Register</h1>
+          <form action="/register" method="POST">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Логин"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Пароль"
+              required
+            />
+            <p>
+              Already have account?
+              <a href="/login">Login</a>
+            </p>
+            <button type="submit">Sign up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
